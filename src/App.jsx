@@ -38,7 +38,7 @@ function App() {
     data.append("photo", file);
 
     if (!publicId) {
-      const response = await fetch("http://localhost:5000/add-image", {
+      const response = await fetch("https://e-book-backend-n147.onrender.com/add-image", {
         method: "POST",
         body: data,
       });
@@ -57,7 +57,7 @@ function App() {
       }, 2000);
     } else {
       const response = await fetch(
-        `http://localhost:5000/update-image/${publicId}`,
+        `https://e-book-backend-n147.onrender.com/update-image/${publicId}`,
         {
           method: "POST",
           body: data,
@@ -86,7 +86,7 @@ function App() {
     }
 
     const response = await fetch(
-      `http://localhost:5000/delete-image/${publicId}`,
+      `https://e-book-backend-n147.onrender.com/delete-image/${publicId}`,
       {
         method: "DELETE",
       }
